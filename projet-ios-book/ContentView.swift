@@ -36,14 +36,10 @@ struct ContentView: View {
                 .badge("!")
                 
             } .scrollContentBackground(.hidden)
-            
+        
         }
-       
-        
-        
-        
 
-}
+    }
 }
 
 #Preview {
