@@ -18,6 +18,13 @@ class BookViewModel {
     
     var books = UserDefaults.standard.array(forKey: "booksSaved") as? [Book] ?? []
     
+    init() {
+        self.searchText = ""
+        self.updateIsOpen = false
+        self.deleteIsOpen = false
+        self.books = UserDefaults.standard.array(forKey: "booksSaved") as? [Book] ?? []
+    }
+    
     
     
     // Nombre total des livres...
@@ -57,6 +64,12 @@ class BookViewModel {
         }
         
         return self.books.filter { $0.title.lowercased().contains(searchText.lowercased()) || $0.author.lowercased().contains(searchText.lowercased()) }
+    }
+    
+    func reload() -> Void {
+        self.books = UserDefaults.standard.array(forKey: "booksSaved") as? [Book] ?? []
+        print("reloaded")
+        print("\(self.books.count)")
     }
     
 }

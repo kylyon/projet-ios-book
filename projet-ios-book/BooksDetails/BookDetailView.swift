@@ -10,18 +10,11 @@ import SwiftUI
 struct BookDetailView: View {
     
     @State var viewModel = BookDetailViewModel();
-    @State var heartsIcon="heart"
-    @State var isFavorite:Bool = false
     
     let backgroundGradient = LinearGradient(
         colors: [Color.blue, Color.black],
         startPoint: .top, endPoint: .bottom)
     
-    
-    func isFavoriteTapped() {
-        isFavorite.toggle()
-        heartsIcon = isFavorite ? "heart.fill" : "heart"
-    }
     
     // Declaration du corps de ma function
     var body: some View {
@@ -66,9 +59,9 @@ struct BookDetailView: View {
                                 
                                 //Ajout dans la carte
                                 
-                                Button("", systemImage:"\(heartsIcon)"){
+                                Button("", systemImage:"\(viewModel.heartsIcon)"){
                                     
-                                    isFavoriteTapped()
+                                    viewModel.isFavoriteTapped()
                                     
                                 }.tint(.red).font(.system(size: 20))
                                 

@@ -12,6 +12,8 @@ struct BookListView: View {
     
     @State var viewModel = BookViewModel();
     
+    
+    
     // Déclaration du corps de ma function
     var body: some View {
         
@@ -36,6 +38,10 @@ struct BookListView: View {
             }
                
             
+        }
+        .onAppear
+        {
+            viewModel.reload()
         }
     }
 }

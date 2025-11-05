@@ -16,5 +16,6 @@ class BooksRowViewModel : Identifiable, Codable
     init(books: [Book], label: String) {
         self.books = books
         self.label = label
+        print("created")
     }
 }
