@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import BookDesignSystem
 
 struct ContentView: View {
     
@@ -35,14 +36,9 @@ struct ContentView: View {
                 .badge("!")
                 
             } .scrollContentBackground(.hidden)
-            
+        
         }
-       
-        
-        
-        
-
-}
+    }
 }
 
 #Preview {
