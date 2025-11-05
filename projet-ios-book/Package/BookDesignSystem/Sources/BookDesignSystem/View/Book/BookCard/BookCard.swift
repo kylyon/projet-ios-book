@@ -27,20 +27,28 @@ public struct BookCard: View {
                     
                 
                 VStack(alignment: .leading) {
-                    Text(Date.now.formatted(date: .numeric, time: .omitted))
-                        .multilineTextAlignment(.leading)
                     Text(book.title)
                         .multilineTextAlignment(.leading)
                         .font(.system(size: 20))
                         .bold()
+                    HStack {
+                        Text(book.author)
+                            .multilineTextAlignment(.leading)
+                            .font(.system(size: 12))
+                        Text(Date.now.formatted(date: .numeric, time: .omitted))
+                            .multilineTextAlignment(.leading)
+                            .font(.system(size: 12))
+                    }
                     Text(book.description)
                         .multilineTextAlignment(.leading)
+                        .foregroundStyle(Color("TextSecondaryColor", bundle: .module))
                         
                     Spacer()
                 }
                 .padding()
                 .frame(minWidth: 200, minHeight: 150, maxHeight: 150)
                 .background(Color("CardBackground", bundle: .module))
+                .foregroundStyle(Color("TextPrimaryColor", bundle: .module))
             }
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: Color("CardBackgroundShadow", bundle: .module), radius: 8, x: 0, y: 5)

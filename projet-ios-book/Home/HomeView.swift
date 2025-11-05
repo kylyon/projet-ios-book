@@ -38,8 +38,8 @@ struct HomeView: View {
                             .resizable()
                             .scaledToFill()
                             .frame(width: UIScreen.main.bounds.width - 30, height: 250)
-                            .cornerRadius(20)
                             .overlay(Color.black.opacity(0.4))
+                            .cornerRadius(20)
                         // Card...
                         VStack(alignment: .leading){
                             Text("About book store")
@@ -97,7 +97,7 @@ struct HomeView: View {
                     .scrollContentBackground(.hidden)
                     
                     BooksRowView("Romans", books: books)
-                    BooksRowView("S-F", books: books)
+                    BooksRowView("Science-Fiction", books: books)
                     BooksRowView("Bande Dessinée", books: books)
                 }
         

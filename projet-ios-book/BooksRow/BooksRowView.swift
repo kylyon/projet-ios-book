@@ -18,11 +18,7 @@ struct BooksRowView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(booksRowViewModel.label)
-                .font(.system(size: 24))
-                .bold()
-                .multilineTextAlignment(.leading)
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+            TitleSection(label: booksRowViewModel.label)
                 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
@@ -43,4 +39,9 @@ struct BooksRowView: View {
             
         }
     }
+}
+
+#Preview
+{
+    ContentView()
 }
