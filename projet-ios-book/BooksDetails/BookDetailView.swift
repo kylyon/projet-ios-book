@@ -10,6 +10,15 @@ import SwiftUI
 struct BookDetailView: View {
     
     @State var viewModel = BookDetailViewModel();
+    let backgroundLenear =
+    (
+        LinearGradient (
+            colors:
+                [Color.blue, Color.purple],
+            startPoint: .leading,
+            endPoint: .trailing
+        )
+    )
     
     // Declaration du corps de ma function
     var body: some View {
@@ -83,7 +92,7 @@ struct BookDetailView: View {
                 
                 
             }
-        }
+        }.background(backgroundLenear)
     }
 }
 
