@@ -23,7 +23,10 @@ struct ContentView: View {
             
             TabView {
                 Tab("Home", systemImage: "house.fill") {
-                    HomeView()
+                    NavigationView{
+                        HomeView()
+                    }
+                    
                 }
                 
                 Tab("My Library", systemImage: "book.fill") {

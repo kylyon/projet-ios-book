@@ -37,9 +37,9 @@ struct HomeView: View {
                         Image("desktop-wallpaper-red-sky-mountains-trees-digital-art-painting-painted-sky")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 375, height: 250)
-                            .cornerRadius(20)
+                            .frame(width: UIScreen.main.bounds.width - 30, height: 250)
                             .overlay(Color.black.opacity(0.4))
+                            .cornerRadius(20)
                         // Card...
                         VStack(alignment: .leading){
                             Text("About book store")
@@ -97,7 +97,7 @@ struct HomeView: View {
                     .scrollContentBackground(.hidden)
                     
                     BooksRowView("Romans", books: books)
-                    BooksRowView("S-F", books: books)
+                    BooksRowView("Science-Fiction", books: books)
                     BooksRowView("Bande Dessinée", books: books)
                 }
         

@@ -16,45 +16,47 @@ class BookViewModel {
     var updateIsOpen: Bool = false;
     var deleteIsOpen: Bool = false;
     
+    var books = UserDefaults.standard.array(forKey: "booksSaved") as? [Book] ?? []
+    
     
     
     // Nombre total des livres...
     var booksNumber : Int {
-        return books.count
+        return self.books.count
     }
     
     // Ajout un nouveau livre
     func addNewBook(title: String, description: String, coverImage: String, author: String, price: Double, publishedDate: String) {
         
-        @State var id:Int = 1+books.count // Incrementation automatique....
+        @State var id:Int = 1+self.books.count // Incrementation automatique....
         
-        books.append(Book(id:id, title: title, description: description, coverImage: coverImage, author: author, price: price, publishedDate: publishedDate))
+        self.books.append(Book(id:id, title: title, description: description, coverImage: coverImage, author: author, price: price, publishedDate: publishedDate))
     }
     
     // Delete Books
     func deleteBook(at index: Int) {
-        guard index >= 0 && index < books.count else { return }
-        books.remove(at: index)
+        guard index >= 0 && index < self.books.count else { return }
+        self.books.remove(at: index)
     }
     
     // Update Books
     
     func updateBook(at index: Int, title: String, description: String, coverImage: String, author: String, price: Double, publishedDate: String) {
-        guard index >= 0 && index < books.count else { return }
-        books[index].title = title
-        books[index].description = description
-        books[index].coverImage = coverImage
-        books[index].author = author
+        guard index >= 0 && index < self.books.count else { return }
+        self.books[index].title = title
+        self.books[index].description = description
+        self.books[index].coverImage = coverImage
+        self.books[index].author = author
     }
     
     // Recherche Books
     func researchBook() -> [Book] {
         
         guard !searchText.isEmpty else {
-            return books
+            return self.books
         }
         
-        return books.filter { $0.title.lowercased().contains(searchText.lowercased()) || $0.author.lowercased().contains(searchText.lowercased()) }
+        return self.books.filter { $0.title.lowercased().contains(searchText.lowercased()) || $0.author.lowercased().contains(searchText.lowercased()) }
     }
     
 }
