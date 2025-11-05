@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+import BookDesignSystem
 
-struct Books : Identifiable, Codable {
+struct Book: Identifiable, Codable {
     
     var id: Int
     var title: String
@@ -19,8 +20,8 @@ struct Books : Identifiable, Codable {
     
 }
 
-var books:[Books] = [
-    Books(
+var books:[Book] = [
+    Book(
             id: 1,
             title: "L’Alchimiste",
             description: "Un jeune berger andalou part à la recherche d’un trésor caché et découvre la sagesse de la vie et de ses propres rêves.",
@@ -29,7 +30,7 @@ var books:[Books] = [
             price: 9.99,
             publishedDate: "1988-04-15"
         ),
-        Books(
+        Book(
             id:2,
             title: "Le Petit Prince",
             description: "Un aviateur rencontre un jeune prince venu d’une autre planète et découvre une philosophie poétique sur l’amitié et la vie.",
@@ -38,7 +39,7 @@ var books:[Books] = [
             price: 7.50,
             publishedDate: "1943-04-06"
         ),
-        Books(
+        Book(
             id:3,
             title: "1984",
             description: "Un roman dystopique où le monde est dirigé par un régime totalitaire qui contrôle la pensée et l’histoire.",
@@ -47,7 +48,7 @@ var books:[Books] = [
             price: 11.90,
             publishedDate: "1949-06-08"
         ),
-        Books(
+        Book(
             id:4,
             title: "La Peste",
             description: "Une épidémie s’abat sur la ville d’Oran, révélant les comportements et les valeurs humaines face au malheur collectif.",
@@ -56,7 +57,7 @@ var books:[Books] = [
             price: 10.40,
             publishedDate: "1947-06-10"
         ),
-        Books(
+        Book(
             id:5,
             title: "Harry Potter à l’école des sorciers",
             description: "Un jeune orphelin découvre qu’il est un sorcier et intègre l’école de magie de Poudlard, où l’attend un destin exceptionnel.",
@@ -65,7 +66,7 @@ var books:[Books] = [
             price: 12.99,
             publishedDate: "1997-06-26"
         ),
-        Books(
+        Book(
             id:6,
             title: "Les Misérables",
             description: "L’histoire de Jean Valjean, un ancien forçat, qui cherche la rédemption dans la France du XIXe siècle.",

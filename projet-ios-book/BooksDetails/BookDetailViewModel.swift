@@ -12,7 +12,7 @@ import SwiftUI
 class BookDetailViewModel {
     
     var id: Int = 0
-    var book : Books?
+    var book : Book?
 
     
     // l'initialisation prend en paramètre deux valeurs ( le 
