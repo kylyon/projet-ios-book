@@ -37,7 +37,7 @@ struct HomeView: View {
                         Image("desktop-wallpaper-red-sky-mountains-trees-digital-art-painting-painted-sky")
                             .resizable()
                             .scaledToFill()
-                            .frame(width: 375, height: 250)
+                            .frame(width: UIScreen.main.bounds.width - 30, height: 250)
                             .cornerRadius(20)
                             .overlay(Color.black.opacity(0.4))
                         // Card...
