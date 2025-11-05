@@ -28,7 +28,7 @@ class BookViewModel {
         
         @State var id:Int = 1+books.count // Incrementation automatique....
         
-        books.append(Books(id:id, title: title, description: description, coverImage: coverImage, author: author, price: price, publishedDate: publishedDate))
+        books.append(Book(id:id, title: title, description: description, coverImage: coverImage, author: author, price: price, publishedDate: publishedDate))
     }
     
     // Delete Books
@@ -48,7 +48,7 @@ class BookViewModel {
     }
     
     // Recherche Books
-    func researchBook() -> [Books] {
+    func researchBook() -> [Book] {
         
         guard !searchText.isEmpty else {
             return books

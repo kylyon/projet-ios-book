@@ -93,6 +93,10 @@ struct HomeView: View {
                     .padding(.horizontal)
                 }
                 .scrollContentBackground(.hidden)
+                
+                BooksRowView("Romans", books: books)
+                BooksRowView("S-F", books: books)
+                BooksRowView("Bande Dessinée", books: books)
         
             }
             

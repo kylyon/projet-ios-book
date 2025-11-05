@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import BookDesignSystem
 
 struct BookListView: View {
     
@@ -22,6 +22,7 @@ struct BookListView: View {
                
                     
                     List(viewModel.researchBook()) { book in
+<<<<<<< HEAD
                        HStack {
                            Image(book.coverImage).resizable().frame(width: 50, height: 70)
                             Text(book.title)
@@ -44,27 +45,15 @@ struct BookListView: View {
                        }
                        .listRowInsets(.init(top: 10, leading: 10, bottom: 10, trailing: 10))
                        
+=======
+                        BookItem(BookItemData(title: book.title, coverImage: book.coverImage, author: book.author))
+>>>>>>> ac9ec7f (added: Component BookItem, BookCard)
                     }
                     .navigationTitle(Text("Book List"))
                     .searchable(text: $viewModel.searchText)
                
             
         }
-         .alert(isPresented: $viewModel.deleteIsOpen)
-          {
-             Alert(
-                     title: Text("Voulez-vous vraiment supprimer ce livre ?"),
-                     message: Text("La suppression est irréversible."),
-                     primaryButton: .default(
-                         Text("Annuler"),
-                     ),
-                     secondaryButton: .destructive(
-                         Text("Effacer")
-                     )
-                 )
-             }
-        
-      
     }
 }
 #Preview {

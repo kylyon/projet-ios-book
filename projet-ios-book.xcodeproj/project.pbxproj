@@ -14,22 +14,9 @@
 		86AAE7392EBA312200E46BF8 /* projet-ios-book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "projet-ios-book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		86B9D1752EBA4B190024CB81 /* Exceptions for "projet-ios-book" folder in "projet-ios-book" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Package/Users/km253685/Documents/SwiftUI/projet-ios-book/projet-ios-book/Package/BookDesignSystem",
-			);
-			target = 86AAE7382EBA312200E46BF8 /* projet-ios-book */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		86AAE73B2EBA312200E46BF8 /* projet-ios-book */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				86B9D1752EBA4B190024CB81 /* Exceptions for "projet-ios-book" folder in "projet-ios-book" target */,
-			);
 			path = "projet-ios-book";
 			sourceTree = "<group>";
 		};

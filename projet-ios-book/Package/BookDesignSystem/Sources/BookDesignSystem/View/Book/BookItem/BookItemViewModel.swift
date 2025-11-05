@@ -10,9 +10,10 @@ import SwiftUI
 @Observable
 class BookItemViewModel
 {
-    var book: Book?
+    var bookData: BookItemData?
+    var deleteIsOpen: Bool = false
     
-    init(bookID: Int) {
-        self.book = booksArray.first(where: { $0.id == bookID})
+    init(_ bookData: BookItemData) {
+        self.bookData = bookData
     }
 }
