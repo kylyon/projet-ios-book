@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import DesignSystem
+
 
 struct BookListView: View {
     
@@ -19,7 +19,7 @@ struct BookListView: View {
         VStack {
             
             // Contenu des livres....
-                Section(header: Text("Books")) {
+               
                     
                     List(viewModel.researchBook()) { book in
                        HStack {
@@ -43,9 +43,11 @@ struct BookListView: View {
                            }.tint(.red)
                        }
                        .listRowInsets(.init(top: 10, leading: 10, bottom: 10, trailing: 10))
+                       
                     }
+                    .navigationTitle(Text("Book List"))
                     .searchable(text: $viewModel.searchText)
-                }
+               
             
         }
          .alert(isPresented: $viewModel.deleteIsOpen)

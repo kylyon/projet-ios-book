@@ -9,16 +9,41 @@ import SwiftUI
 import BookDesignSystem
 
 struct ContentView: View {
+    
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            BookItem()
+        
+        VStack (spacing:0) {
+            
+           // Header
+           HeaderView()
+            
+            // TabView
+            
+            TabView {
+                Tab("Home", systemImage: "house.fill") {
+                    HomeView()
+                }
+                
+                Tab("My Library", systemImage: "book.fill") {
+                    BookListView()
+                }
+                
+                Tab("Account", systemImage: "person.crop.circle.fill") {
+                    BookDetailView()
+                }
+                .badge("!")
+                
+            } .scrollContentBackground(.hidden)
+            
         }
-        .padding()
-    }
+       
+        
+        
+        
+
+}
 }
 
 #Preview {
