@@ -10,7 +10,9 @@ import BookDesignSystem
 
 struct BookListView: View {
     
-    @State var viewModel = BookViewModel();
+    @StateObject var viewModel = BookViewModel();
+    
+    
     
     // Déclaration du corps de ma function
     var body: some View {
@@ -21,7 +23,8 @@ struct BookListView: View {
                
             if (viewModel.researchBook().count != 0) {
                 List(viewModel.researchBook()) { book in
-                    BookItem(BookItemData(title: book.title, coverImage: book.coverImage, author: book.author))
+                    BookItem(BookItemData(id: book.id, title: book.title, coverImage: book.coverImage, author: book.author), callbackDelete: viewModel.deleteBook)
+                        
                 }
                 .navigationTitle(Text("Book List"))
                 .searchable(text: $viewModel.searchText)
@@ -36,6 +39,10 @@ struct BookListView: View {
             }
                
             
+        }
+        .onAppear
+        {
+            viewModel.reload()
         }
     }
 }

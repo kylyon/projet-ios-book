@@ -68,7 +68,7 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 16) {
-                            ForEach(books) { book in
+                            ForEach(booksList) { book in
                                 HStack {
                                     Image(book.coverImage)
                                         .resizable()
@@ -96,9 +96,9 @@ struct HomeView: View {
                     }
                     .scrollContentBackground(.hidden)
                     
-                    BooksRowView("Romans", books: books)
-                    BooksRowView("Science-Fiction", books: books)
-                    BooksRowView("Bande Dessinée", books: books)
+                    BooksRowView("Romans", books: booksList)
+                    BooksRowView("Science-Fiction", books: booksList)
+                    BooksRowView("Bande Dessinée", books: booksList)
                 }
         
             }
