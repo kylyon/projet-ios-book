@@ -9,7 +9,7 @@ import SwiftUI
 @Observable
 
 class Users {
-    var pseudo : String = "virgie@"
+    var pseudo : String = "virgie"
     var name:String="Elenga "
     var firstName:String="Dan"
     var photo:String="Virginie-Efira-on-connait-le-secret-de-son-carre-ondule"
