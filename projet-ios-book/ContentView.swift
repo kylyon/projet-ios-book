@@ -12,6 +12,15 @@ struct ContentView: View {
     
     @State private var selectedTabIndex = 0
     
+    init() {
+        self.selectedTabIndex = 0
+        
+        let tabBarAppearance = UITabBarAppearance()
+        
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+    }
+    
     
     var body: some View {
         
@@ -24,7 +33,7 @@ struct ContentView: View {
             
             TabView (selection: $selectedTabIndex ) {
                 Tab("Home", systemImage: "house.fill", value: 0) {
-                    NavigationView{
+                    NavigationStack{
                         HomeView()
                     }
                 }
@@ -41,9 +50,11 @@ struct ContentView: View {
                 Tab("Account", systemImage: "person.crop.circle.fill", value:3) {
                     AccountView()
                 }
-                .badge("!")
                 
-            } .scrollContentBackground(.hidden)
+                
+            }
+            .scrollContentBackground(.hidden)
+            .accentColor(.blue)
             
         
         }
