@@ -14,7 +14,7 @@ class BooksRowViewModel : Identifiable, Codable
     var label: String
     
     init(books: [Book], label: String) {
-        self.books = books
+        self.books = books.filter( { book in book.category.contains(label)} )
         self.label = label
         print("created")
     }

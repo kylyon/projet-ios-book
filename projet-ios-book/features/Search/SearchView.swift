@@ -14,6 +14,8 @@ struct SearchView: View {
         colors: [Color.blue, Color.black],
         startPoint: .top, endPoint: .bottom)
     
+    
+    
     var body: some View {
         
         NavigationStack {
@@ -26,7 +28,9 @@ struct SearchView: View {
                     BooksColView()
                 }
             }
-        }.searchable(text: $viewModel.searchText)
+        }
+        .searchable(text: $viewModel.searchText)
+        
         
     }
 }
