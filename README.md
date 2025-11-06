@@ -33,7 +33,7 @@ Pour un premier projet en Swift et en développement iOS, je suis satisfait du r
 
 ### Kyllian MARIE-MAGDELAINE
 
-
+Je trouve qu'on s'en sort pas mal, peut être qu'on à pas mis assez l'accent sur le DesignSystem. On aurait pu utiliser une API pour les livres pour appronfondir les protocoles et les Async/Await. Mais sinon dans l'ensemble plutôt satisfait pour un premier projet sur SwiftUI.
 
 ## MASTERE  : LDF Promo 2027 
 
