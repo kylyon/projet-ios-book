@@ -20,7 +20,7 @@ struct Book: Identifiable, Codable {
     
 }
 
-var books:[Book] = [
+var booksList:[Book] = [
     Book(
             id: 1,
             title: "L’Alchimiste",

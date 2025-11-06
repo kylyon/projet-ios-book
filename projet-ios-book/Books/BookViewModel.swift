@@ -6,23 +6,23 @@
 //
 
 import SwiftUI
+import Combine
 
-@Observable
-
-class BookViewModel {
+class BookViewModel: ObservableObject {
     
     var searchText: String = "";
     
     var updateIsOpen: Bool = false;
     var deleteIsOpen: Bool = false;
     
-    var books = UserDefaults.standard.array(forKey: "booksSaved") as? [Book] ?? []
+    @Published var books: [Book] = []
     
     init() {
         self.searchText = ""
         self.updateIsOpen = false
         self.deleteIsOpen = false
-        self.books = UserDefaults.standard.array(forKey: "booksSaved") as? [Book] ?? []
+        let userDefaultListBook = UserDefaults.standard.array(forKey: "booksSaved") as? [Int] ?? []
+        self.books = booksList.filter({book in userDefaultListBook.contains(book.id) })
     }
     
     
@@ -41,9 +41,19 @@ class BookViewModel {
     }
     
     // Delete Books
-    func deleteBook(at index: Int) {
-        guard index >= 0 && index < self.books.count else { return }
-        self.books.remove(at: index)
+    func deleteBook(at index: Int)
+    {
+        guard index >= 0 && self.books.contains(where: { book in book.id == index }) else { return }
+        self.books.removeAll(where: { book in book.id == index })
+        
+        var tempList = UserDefaults.standard.array(forKey: "booksSaved") as? [Int] ?? []
+        tempList = tempList.filter({ bookId in
+            bookId != index
+        })
+        UserDefaults.standard.set(tempList, forKey: "booksSaved")
+        
+        print("deleted")
+        print("\(self.books.count)")
     }
     
     // Update Books
@@ -67,7 +77,8 @@ class BookViewModel {
     }
     
     func reload() -> Void {
-        self.books = UserDefaults.standard.array(forKey: "booksSaved") as? [Book] ?? []
+        let userDefaultListBook = UserDefaults.standard.array(forKey: "booksSaved") as? [Int] ?? []
+        self.books = booksList.filter({book in userDefaultListBook.contains(book.id) })
         print("reloaded")
         print("\(self.books.count)")
     }

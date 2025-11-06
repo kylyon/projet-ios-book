@@ -21,12 +21,14 @@ public protocol BookProtocol : Identifiable, Codable, Sendable {
 
 public struct BookItemData
 {
-    public init(title: String, coverImage: String, author: String) {
+    public init(id: Int,title: String, coverImage: String, author: String) {
+        self.id = id
         self.title = title
         self.coverImage = coverImage
         self.author = author
     }
     
+    var id: Int
     var title: String
     var coverImage: String
     var author: String

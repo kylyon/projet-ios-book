@@ -91,6 +91,10 @@ struct BookDetailView: View {
             
             
         }
+        .onAppear
+        {
+            viewModel.reload()
+        }
     }
     
 }

@@ -9,14 +9,16 @@ import SwiftUI
 
 public struct BookItem : View {
     @State var bookItemViewModel: BookItemViewModel
+    var callbackDelete: (Int) -> ()
     
     /*public init() {
         //self.bookItemViewModel = BookItemViewModel(book: books[0])
     }*/
     
-    public init(_ bookData: BookItemData)
+    public init(_ bookData: BookItemData, callbackDelete: @escaping (Int) -> () = {_ in print("efface")})
     {
         self.bookItemViewModel = BookItemViewModel(bookData)
+        self.callbackDelete = callbackDelete
     }
     
     public var body: some View {
@@ -53,7 +55,9 @@ public struct BookItem : View {
             presenting: bookItemViewModel.bookData
         ) { details in
             Button(role: .destructive) {
-                print("efface")
+                if let book = self.bookItemViewModel.bookData {
+                    callbackDelete(book.id)
+                }
             } label: {
                 Text("Effacer")
             }
