@@ -10,7 +10,7 @@ import BookDesignSystem
 
 struct BookListView: View {
     
-    @StateObject var viewModel = BookViewModel();
+    @StateObject var viewModel = BookListViewModel();
     
     let backgroundGradient = LinearGradient(
          colors: [Color.blue, Color.black],
@@ -59,5 +59,5 @@ struct BookListView: View {
     }
 }
 #Preview {
-    BookListView(viewModel :BookViewModel())
+    BookListView(viewModel :BookListViewModel())
 }

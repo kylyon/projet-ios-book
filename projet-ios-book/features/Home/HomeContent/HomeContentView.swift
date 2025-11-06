@@ -40,10 +40,17 @@ struct HomeContentView: View {
             }
             .scrollContentBackground(.hidden)
             
-            BooksRowView("Romans", books: booksList)
-            BooksRowView("Science-Fiction", books: booksList)
-            BooksRowView("Bande Dessinée", books: booksList)
+            ForEach(categoriesList.sorted(by: <), id: \.self)
+            { category in
+                BooksRowView(category, books: booksList)
+            }
+            
+            
+            /*BooksRowView("Science-Fiction", books: booksList)
+            BooksRowView("Bande Dessinée", books: booksList)*/
         }
+        
+        
         
     }
 }

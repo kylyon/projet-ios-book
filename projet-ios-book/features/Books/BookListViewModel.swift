@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class BookViewModel: ObservableObject {
+class BookListViewModel: ObservableObject {
     
     var searchText: String = "";
     
