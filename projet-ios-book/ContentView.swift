@@ -18,7 +18,7 @@ struct ContentView: View {
         VStack (spacing:0) {
             
            // Header
-           HeaderView()
+           //HeaderView()
             
             // TabView
             
