@@ -45,5 +45,5 @@ struct BooksColView: View {
 
 #Preview
 {
-    BooksColView(books: books)
+    BooksColView(books: booksList)
 }

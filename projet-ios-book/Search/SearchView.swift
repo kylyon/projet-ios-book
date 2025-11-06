@@ -8,7 +8,7 @@ import SwiftUI
 
 struct SearchView: View {
     
-    @State var viewModel = BooksColViewModel(books:books);
+    @State var viewModel = BooksColViewModel(books:booksList);
     
     let backgroundGradient = LinearGradient(
         colors: [Color.blue, Color.black],
@@ -22,12 +22,12 @@ struct SearchView: View {
                 .ignoresSafeArea()
             
             VStack {
-                BooksColView(books: books)
+                BooksColView(books: booksList)
             }
             
         }
     }
 }
 #Preview {
-    SearchView(viewModel : BooksColViewModel(books:books))
+    SearchView(viewModel : BooksColViewModel(books:booksList))
 }
