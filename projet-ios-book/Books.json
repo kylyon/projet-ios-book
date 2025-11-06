@@ -1,0 +1,214 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "L’Alchimiste",
+      "description": "Un jeune berger andalou part à la recherche d’un trésor caché et découvre la sagesse de la vie et de ses propres rêves.",
+      "coverImage": "81m5mOoigQL._SL1500_",
+      "author": "Paulo Coelho",
+      "price": 9.99,
+      "publishedDate": "1988-04-15",
+      "category": "Romance / Littérature"
+    },
+    {
+      "id": 2,
+      "title": "Le Petit Prince",
+      "description": "Un aviateur rencontre un jeune prince venu d’une autre planète et découvre une philosophie poétique sur l’amitié et la vie.",
+      "coverImage": "81HUqBa5fxL._SL1500_",
+      "author": "Antoine de Saint-Exupéry",
+      "price": 7.50,
+      "publishedDate": "1943-04-06",
+      "category": "Science-fiction"
+    },
+    {
+      "id": 3,
+      "title": "1984",
+      "description": "Un roman dystopique où le monde est dirigé par un régime totalitaire qui contrôle la pensée et l’histoire.",
+      "coverImage": "page0001_1",
+      "author": "George Orwell",
+      "price": 11.90,
+      "publishedDate": "1949-06-08",
+      "category": "Bande dessinée"
+    },
+    {
+      "id": 4,
+      "title": "La Peste",
+      "description": "Une épidémie s’abat sur la ville d’Oran, révélant les comportements et les valeurs humaines face au malheur collectif.",
+      "coverImage": "81Ajx6xwHZL._SL1500_",
+      "author": "Albert Camus",
+      "price": 10.40,
+      "publishedDate": "1947-06-10",
+      "category": "Bande dessinée"
+    },
+    {
+      "id": 5,
+      "title": "Harry Potter à l’école des sorciers",
+      "description": "Un jeune orphelin découvre qu’il est un sorcier et intègre l’école de magie de Poudlard, où l’attend un destin exceptionnel.",
+      "coverImage": "81wKVNwLHBL._SL1500_",
+      "author": "J.K. Rowling",
+      "price": 12.99,
+      "publishedDate": "1997-06-26",
+      "category": "Science-fiction"
+    },
+    {
+      "id": 6,
+      "title": "Les Misérables",
+      "description": "L’histoire de Jean Valjean, un ancien forçat, qui cherche la rédemption dans la France du XIXe siècle.",
+      "coverImage": "Couv_183628_petit spirou",
+      "author": "Victor Hugo",
+      "price": 14.50,
+      "publishedDate": "1862-04-03",
+      "category": "Romance / Littérature"
+    },
+    {
+      "id": 7,
+      "title": "Le Nom de la Rose",
+      "description": "Un moine franciscain mène une enquête sur une série de meurtres mystérieux dans une abbaye médiévale.",
+      "coverImage": "23-poster-couverture-tintin-et-les-picaros.jpg",
+      "author": "Umberto Eco",
+      "price": 13.20,
+      "publishedDate": "1980-09-15",
+      "category": "Policier / Thriller"
+    },
+    {
+      "id": 8,
+      "title": "Fahrenheit 451",
+      "description": "Dans un futur où les livres sont interdits, un pompier chargé de les brûler commence à remettre en question le système.",
+      "coverImage": "51-UHfFRobL._SY445_SX342_QL70_ML2_",
+      "author": "Ray Bradbury",
+      "price": 9.80,
+      "publishedDate": "1953-10-19",
+      "category": "Science-fiction"
+    },
+    {
+      "id": 9,
+      "title": "Le Comte de Monte-Cristo",
+      "description": "Edmond Dantès, trahi et emprisonné injustement, prépare sa vengeance après des années de captivité.",
+      "coverImage": "71InNnatr-L._SL1500_",
+      "author": "Alexandre Dumas",
+      "price": 15.00,
+      "publishedDate": "1844-08-28",
+      "category": "Romance / Littérature"
+    },
+    {
+      "id": 10,
+      "title": "La Nuit des temps",
+      "description": "Une expédition scientifique découvre un couple d’amoureux préhistoriques conservés dans la glace depuis des millénaires.",
+      "coverImage": "71qjo8OXh0L._SL1500_",
+      "author": "René Barjavel",
+      "price": 10.90,
+      "publishedDate": "1968-05-20",
+      "category": "Science-fiction"
+    },
+    {
+      "id": 11,
+      "title": "Orgueil et Préjugés",
+      "description": "Elizabeth Bennet et M. Darcy se confrontent à leurs préjugés dans une société anglaise pleine de conventions.",
+      "coverImage": "71XS48kO7JL._SL1499_",
+      "author": "Jane Austen",
+      "price": 8.70,
+      "publishedDate": "1813-01-28",
+      "category": "Romance / Littérature"
+    },
+    {
+      "id": 12,
+      "title": "Shining",
+      "description": "Un écrivain devient le gardien d’un hôtel isolé et sombre peu à peu dans la folie sous l’influence d’esprits maléfiques.",
+      "coverImage": "81Ajx6xwHZL._SL1500_",
+      "author": "Stephen King",
+      "price": 11.50,
+      "publishedDate": "1977-01-28",
+      "category": "Horreur"
+    },
+    {
+      "id": 13,
+      "title": "Le Seigneur des Anneaux : La Communauté de l’Anneau",
+      "description": "Un jeune hobbit hérite d’un anneau maléfique et entreprend un voyage périlleux pour le détruire.",
+      "coverImage": "81HUqBa5fxL._SL1500_",
+      "author": "J.R.R. Tolkien",
+      "price": 16.90,
+      "publishedDate": "1954-07-29",
+      "category": "Science-fiction"
+    },
+    {
+      "id": 14,
+      "title": "Le Parfum",
+      "description": "Un homme doté d’un sens de l’odorat exceptionnel tue pour capturer l’essence parfaite.",
+      "coverImage": "81m5mOoigQL._SL1500_",
+      "author": "Patrick Süskind",
+      "price": 10.60,
+      "publishedDate": "1985-02-05",
+      "category": "Policier / Thriller"
+    },
+    {
+      "id": 15,
+      "title": "L’Étranger",
+      "description": "Un homme détaché de tout commet un meurtre absurde sur une plage d’Alger et se confronte à l’absurdité de la vie.",
+      "coverImage": "81pfxjDmRhL._SY522_",
+      "author": "Albert Camus",
+      "price": 8.90,
+      "publishedDate": "1942-05-19",
+      "category": "Romance / Littérature"
+    },
+    {
+      "id": 16,
+      "title": "Millénium : Les hommes qui n’aimaient pas les femmes",
+      "description": "Un journaliste et une hackeuse enquêtent sur la disparition d’une héritière suédoise.",
+      "coverImage": "81wKVNwLHBL._SL1500_",
+      "author": "Stieg Larsson",
+      "price": 12.40,
+      "publishedDate": "2005-08-01",
+      "category": "Policier / Thriller"
+    },
+    {
+      "id": 17,
+      "title": "Les Piliers de la Terre",
+      "description": "L’épopée d’hommes et de femmes unis par la construction d’une cathédrale au XIIe siècle.",
+      "coverImage": "51-UHfFRobL._SY445_SX342_QL70_ML2_",
+      "author": "Ken Follett",
+      "price": 14.90,
+      "publishedDate": "1989-09-03",
+      "category": "Romance / Littérature"
+    },
+    {
+      "id": 18,
+      "title": "L’Ombre du vent",
+      "description": "Un jeune garçon découvre un livre maudit et se retrouve plongé dans une intrigue littéraire et mystérieuse.",
+      "coverImage": "71qjo8OXh0L._SL1500_",
+      "author": "Carlos Ruiz Zafón",
+      "price": 13.50,
+      "publishedDate": "2001-04-12",
+      "category": "Policier / Thriller"
+    },
+    {
+      "id": 19,
+      "title": "Le Vieil Homme et la Mer",
+      "description": "Un vieux pêcheur cubain lutte contre un gigantesque espadon dans une bataille à la fois physique et symbolique.",
+      "coverImage": "81HUqBa5fxL._SL1500_",
+      "author": "Ernest Hemingway",
+      "price": 7.80,
+      "publishedDate": "1952-09-01",
+      "category": "Romance / Littérature"
+    },
+    {
+      "id": 20,
+      "title": "Le Silence des Agneaux",
+      "description": "Une jeune enquêtrice du FBI sollicite l’aide d’un tueur en série pour traquer un autre criminel.",
+      "coverImage": "81m5mOoigQL._SL1500_",
+      "author": "Thomas Harris",
+      "price": 11.90,
+      "publishedDate": "1988-05-19",
+      "category": "Policier / Thriller"
+    },
+    {
+      "id": 21,
+      "title": "Le Petit Prince",
+      "description": "Un aviateur rencontre un jeune prince venu d’une autre planète et découvre une philosophie poétique sur l’amitié et la vie.",
+      "coverImage": "91A43nB5kVL._SY522_",
+      "author": "Antoine de Saint-Exupéry",
+      "price": 7.50,
+      "publishedDate": "1943-04-06",
+      "category": "Bande dessinée"
+    }
+  ]
+}

@@ -34,6 +34,7 @@ struct ContentView: View {
                 }
                 
                 Tab("Search", systemImage: "magnifyingglass",value: 2) {
+                    
                     SearchView()
                 }
                 
@@ -42,9 +43,8 @@ struct ContentView: View {
                 }
                 .badge("!")
                 
-            }
-            .scrollContentBackground(.hidden)
-            .background(Color.blue)
+            } .scrollContentBackground(.hidden)
+            
         
         }
     }
