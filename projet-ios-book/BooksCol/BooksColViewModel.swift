@@ -11,12 +11,12 @@ import SwiftUI
 class BooksColViewModel : Identifiable, Codable
 {
     
-    var books: [Book] = []
+    var books: [Book] = booksList
     var searchText: String = ""
     
-    init(books: [Book]) {
-        self.books = books
-    }
+//    init(books: [Book]) {
+//        self.books = books
+//    }
     
     // Recherche Books
     func researchBook() -> [Book] {

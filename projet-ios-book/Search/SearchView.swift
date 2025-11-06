@@ -8,26 +8,29 @@ import SwiftUI
 
 struct SearchView: View {
     
-    @State var viewModel = BooksColViewModel(books:booksList);
+    @State var viewModel = BooksColViewModel();
     
     let backgroundGradient = LinearGradient(
         colors: [Color.blue, Color.black],
         startPoint: .top, endPoint: .bottom)
     
     var body: some View {
-        ZStack(alignment: .top) {
-            
-            // Background of body...
-            backgroundGradient
-                .ignoresSafeArea()
-            
-            VStack {
-                BooksColView(books: booksList)
+        
+        NavigationStack {
+            ZStack(alignment: .top) {
+                
+                backgroundGradient
+                    .ignoresSafeArea()
+                
+                VStack(spacing:0) {
+                    BooksColView()
+                }
             }
-            
         }
+        
     }
 }
+
 #Preview {
-    SearchView(viewModel : BooksColViewModel(books:booksList))
+    SearchView(viewModel : BooksColViewModel())
 }

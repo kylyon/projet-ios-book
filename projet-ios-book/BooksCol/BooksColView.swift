@@ -9,14 +9,10 @@ import SwiftUI
 import BookDesignSystem
 
 struct BooksColView: View {
-    @State var booksColViewModel: BooksColViewModel
+    @State var booksColViewModel = BooksColViewModel()
     
     let columns = [GridItem(.flexible(), spacing: 42), GridItem(.flexible(), spacing: 42)]
     
-    init( books: [Book])
-    {
-        self.booksColViewModel = BooksColViewModel(books: books)
-    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -24,7 +20,7 @@ struct BooksColView: View {
                 
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: columns) {
-                    ForEach(booksColViewModel.books)
+                    ForEach(booksColViewModel.researchBook())
                     { book in
                         NavigationLink(destination: BookDetailView(viewModel: BookDetailViewModel(id: book.id))) {
                             BookCard(BookCardData(title: book.title, description: book.description, coverImage: book.coverImage, author: book.author, publishedDate: book.publishedDate))
@@ -39,11 +35,13 @@ struct BooksColView: View {
             .contentMargins(20)
             .scrollContentBackground(.hidden)
             
-        }.padding(10)
+        }
+        .searchable(text: $booksColViewModel.searchText)
+        .padding(10)
     }
 }
 
 #Preview
 {
-    BooksColView(books: booksList)
+    BooksColView(booksColViewModel : BooksColViewModel())
 }
