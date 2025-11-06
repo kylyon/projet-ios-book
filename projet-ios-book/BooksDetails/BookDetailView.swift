@@ -78,7 +78,6 @@ struct BookDetailView: View {
                                     Label("", systemImage: "square.and.arrow.up")
                                         .font(.system(size: 20))
                                 }
-                                
                             }
                         }
                         

@@ -10,6 +10,7 @@ import BookDesignSystem
 
 struct ContentView: View {
     
+    @State private var selectedTabIndex = 0
     
     
     var body: some View {
@@ -21,20 +22,23 @@ struct ContentView: View {
             
             // TabView
             
-            TabView {
-                Tab("Home", systemImage: "house.fill") {
+            TabView (selection: $selectedTabIndex ) {
+                Tab("Home", systemImage: "house.fill", value: 0) {
                     NavigationView{
                         HomeView()
                     }
-                    
                 }
                 
-                Tab("My Library", systemImage: "book.fill") {
+                Tab("My Library", systemImage: "book.fill", value: 1) {
                     BookListView()
                 }
                 
-                Tab("Account", systemImage: "person.crop.circle.fill") {
-                    BookDetailView()
+                Tab("Search", systemImage: "magnifyingglass",value: 2) {
+                    SearchView()
+                }
+                
+                Tab("Account", systemImage: "person.crop.circle.fill", value:3) {
+                    AccountView()
                 }
                 .badge("!")
                 
