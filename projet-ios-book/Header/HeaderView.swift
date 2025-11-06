@@ -17,9 +17,10 @@ struct HeaderView : View
             
             HStack {
                 
-                Image(systemName: "book").resizable().frame(width: 20, height: 20).foregroundStyle(.white)
+                
                 Text("Book")
                     .font(.system(size: 35, design: .rounded)).foregroundColor(.white)
+                Image(systemName: "book").resizable().frame(width: 28, height: 25).foregroundStyle(.white)
             }
             
             Spacer()

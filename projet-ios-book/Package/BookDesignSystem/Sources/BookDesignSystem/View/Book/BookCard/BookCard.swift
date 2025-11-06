@@ -22,7 +22,7 @@ public struct BookCard: View {
                 Image(book.coverImage)
                     .resizable()
                     .scaledToFill()
-                    .frame( width: 200, height: 120)
+                    .frame( width: 190, height: 120)
                     .clipped()
                     
                 
@@ -46,13 +46,13 @@ public struct BookCard: View {
                     Spacer()
                 }
                 .padding()
-                .frame(minWidth: 200, minHeight: 150, maxHeight: 150)
+                .frame(minWidth: 190, minHeight: 150, maxHeight: 150)
                 .background(Color("CardBackground", bundle: .module))
                 .foregroundStyle(Color("TextPrimaryColor", bundle: .module))
             }
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: Color("CardBackgroundShadow", bundle: .module), radius: 8, x: 0, y: 5)
-            .frame(minWidth: 200, maxWidth: 200)
+            .frame(minWidth: 190, maxWidth: 190)
         }
         
     }
