@@ -12,7 +12,9 @@ struct BookListView: View {
     
     @StateObject var viewModel = BookViewModel();
     
-    
+    let backgroundGradient = LinearGradient(
+         colors: [Color.blue, Color.black],
+         startPoint: .top, endPoint: .bottom)
     
     // Déclaration du corps de ma function
     var body: some View {
@@ -31,11 +33,14 @@ struct BookListView: View {
             }
             else
             {
-                Image(systemName: "wind")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: UIScreen.main.bounds.width / 3)
-                Text("Aucun livre dans votre liste")
+                VStack {
+                    Image(systemName: "wind")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: UIScreen.main.bounds.width / 3)
+                    Text("Aucun livre dans votre liste")
+                }
+                .foregroundStyle(Color.white)
             }
                
             
@@ -44,6 +49,13 @@ struct BookListView: View {
         {
             viewModel.reload()
         }
+        .frame(
+            minWidth: 0,
+            maxWidth: .infinity,
+            minHeight: 0,
+            maxHeight: .infinity,
+          )
+        .background(backgroundGradient.ignoresSafeArea())
     }
 }
 #Preview {

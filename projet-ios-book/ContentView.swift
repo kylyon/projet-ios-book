@@ -42,7 +42,9 @@ struct ContentView: View {
                 }
                 .badge("!")
                 
-            } .scrollContentBackground(.hidden)
+            }
+            .scrollContentBackground(.hidden)
+            .background(Color.blue)
         
         }
     }
