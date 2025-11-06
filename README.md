@@ -27,7 +27,7 @@ L’objectif principal de ce projet est de se familiariser avec le développemen
 
 ### Dan ELENGA
 
-L’application est fonctionnelle, mais des améliorations sont possibles, notamment au niveau de l’architecture, de l’optimisation des performances et de la transformation de certains éléments en composants réutilisables. L’ajout d’une base de données permettrait également de mieux gérer les livres et d’assurer la cohérence des données. 
+L’application est fonctionnelle, mais des améliorations sont possibles, notamment au niveau de l’architecture, de l’optimisation des performances et de la transformation de certains éléments en composants réutilisables. 
 
 Pour un premier projet en Swift et en développement iOS, je suis satisfait du résultat : c’est un bon point de départ pour la suite.
 
