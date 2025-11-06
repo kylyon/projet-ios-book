@@ -33,11 +33,11 @@ class BookViewModel: ObservableObject {
     }
     
     // Ajout un nouveau livre
-    func addNewBook(title: String, description: String, coverImage: String, author: String, price: Double, publishedDate: String) {
+    func addNewBook(title: String, description: String, coverImage: String, author: String, price: Double, publishedDate: String, category: String) {
         
         @State var id:Int = 1+self.books.count // Incrementation automatique....
         
-        self.books.append(Book(id:id, title: title, description: description, coverImage: coverImage, author: author, price: price, publishedDate: publishedDate))
+        self.books.append(Book(id:id, title: title, description: description, coverImage: coverImage, author: author, price: price, publishedDate: publishedDate, category: category))
     }
     
     // Delete Books

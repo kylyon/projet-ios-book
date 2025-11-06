@@ -26,7 +26,7 @@ struct SearchView: View {
                     BooksColView()
                 }
             }
-        }
+        }.searchable(text: $viewModel.searchText)
         
     }
 }

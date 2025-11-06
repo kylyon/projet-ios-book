@@ -17,6 +17,8 @@ struct HomeView: View {
              colors: [Color.blue, Color.black],
              startPoint: .top, endPoint: .bottom)
         
+        @State var viewModel = BookViewModel();
+        
         // Declaration du corps de ma function
         
         ZStack
@@ -29,20 +31,27 @@ struct HomeView: View {
             ScrollView(){
     
                 VStack {
-                    Text("Welcome to Book Store")
+                    
+                    VStack (spacing:16) {
+                        Image(systemName: "book.fill").resizable().frame(width: 60, height: 45).foregroundStyle(.yellow)
+                        Text("\(booksList.count) Ouvrages disponibles")
+                            .foregroundColor(.white)
+                    }.padding()
+                    
+                    Text("Bienvenue chez  Book Store")
                         .font(.system(size: 30, weight: .bold, design: .default))
                         .foregroundColor(.white)
                     // Section 1
                     ZStack (alignment: .topLeading){
-                        Image("desktop-wallpaper-red-sky-mountains-trees-digital-art-painting-painted-sky")
+                        Image("jonathan-francisca-BpbkLACP64M-unsplash")
                             .resizable()
                             .scaledToFill()
                             .frame(width: UIScreen.main.bounds.width - 30, height: 250)
                             .overlay(Color.black.opacity(0.4))
                             .cornerRadius(20)
                         // Card...
-                        VStack(alignment: .leading){
-                            Text("About book store")
+                        VStack(alignment: .leading, spacing: 20){
+                            Text("A Propos")
                                 .font(.system(size: 30, weight: .bold, design: .default))
                                 .foregroundColor(.white)
                             
@@ -51,11 +60,11 @@ struct HomeView: View {
                                 .foregroundColor(.white)
                             
                             Button(action: {}) {
-                                Text("Go to books")
+                                Text("En apprendre plus")
                                     .font(.system(size: 12, weight: .bold, design: .default))
                                     .foregroundColor(.white)
-                                    .frame(width: 85, height: 50)
-                                    .background(Color.black)
+                                    .frame(width: 150, height: 50)
+                                    .background(Color.blue)
                                     .cornerRadius(10)
                             }
                         }
