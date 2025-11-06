@@ -5,59 +5,39 @@
 //  Created by ELENGA Dan David on 03/11/2025.
 //
 import SwiftUI
+import BookDesignSystem
 
 struct AccountView: View {
     
-    @State var user = Users();
-    @State var isOpen = false;
+    @State var accountViewModel: AccountViewModel
+    
+    let backgroundGradient = LinearGradient(
+         colors: [Color.blue, Color.black],
+         startPoint: .top, endPoint: .bottom)
+    
+    init() {
+        self.accountViewModel = AccountViewModel()
+    }
     
     var body: some View {
-        
-        HStack (alignment: .top, spacing: 150,){
-            Text("Profil")
-                .font(.title)
-                .bold()
             
-            Button("Update",systemImage: "pencil"){
-                isOpen = !isOpen
-            }.buttonStyle(.borderedProminent)
-            
-        }
-        
-        VStack {
-            
-            Image(user.photo)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 100)
-                .frame(width: 100)
-                .clipShape(Circle())
-            VStack{
-                Text(String(user.pseudo)).font(.title).textScale(.secondary)
-                Text(String(user.displayName))
-            }
-            
+        ScrollView {
+            AccountHeaderView(accountViewModel: accountViewModel)
+            AccountStatisticsView(accountViewModel: accountViewModel)
+            AccountFormView(accountViewModel: accountViewModel)
         }
         .padding()
-        
-        
-        if isOpen {
-            
-            HStack {
-                
-                TextField("Nom",text:$user.name)
-                    .textFieldStyle(.roundedBorder)
-                TextField("Firstname",text:$user.firstName)
-                    .textFieldStyle(.roundedBorder)
-                
-            }
-            .padding()
-        }
-        
+        .frame(
+            minWidth: 0,
+            maxWidth: .infinity,
+            minHeight: 0,
+            maxHeight: .infinity,
+          )
+        .background(backgroundGradient.ignoresSafeArea())
     }
 }
 
 #Preview {
-    AccountView(user: Users())
+    AccountView()
 }
 

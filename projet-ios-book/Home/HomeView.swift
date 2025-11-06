@@ -9,6 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     
+    let backgroundGradient = LinearGradient(
+        colors: [Color.blue, Color.black],
+        startPoint: .top, endPoint: .bottom)
+    
     var body: some View {
         
         // Background gradient
@@ -111,8 +115,12 @@ struct HomeView: View {
                 }
         
             }
-            
+    
         }
+        .frame(width: UIScreen.main.bounds.width)
+        .background(backgroundGradient.ignoresSafeArea())
+            
+        
                 
     }
 }
